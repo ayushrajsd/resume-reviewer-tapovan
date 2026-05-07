@@ -1,0 +1,23 @@
+{
+  "name": "resume-reviewer-tapovan",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run server & npm run client",
+    "server": "node --watch server/index.js",
+    "client": "vite --host 0.0.0.0 client",
+    "build": "vite build client",
+    "preview": "vite preview --host 0.0.0.0 client"
+  },
+  "dependencies": {
+    "dotenv": "latest",
+    "express": "latest",
+    "openai": "latest",
+    "vite": "latest",
+    "zod": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {}
+}
