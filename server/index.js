@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import OpenAI from 'openai';
-import { z } from 'zod';
+import { z } from 'zod/v3';
 import { zodResponseFormat } from 'openai/helpers/zod';
 
 const ResumeFeedback = z.object({
@@ -35,7 +35,7 @@ app.post('/api/review', async (req, res) => {
   }
 
   try {
-    const completion = await client.beta.chat.completions.parse({
+    const completion = await client.chat.completions.parse({
       model: 'gpt-4o-mini',
       messages: [
         {
